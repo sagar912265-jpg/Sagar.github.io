@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My personal website built with Termux and Nginx">
-    <title>My Website | Termux Project</title>
+
+    <meta name="description"
+          content="Sagar's personal website built with HTML, CSS, JavaScript, Termux and Nginx">
+
+    <meta name="theme-color" content="#07111f">
+
+    <title>Sagar | Web Developer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <header class="navbar">
-        <div class="logo">⚡ MySite</div>
+
+        <a href="#home" class="logo">
+            <span>⚡</span> Sagar
+        </a>
 
         <nav>
             <a href="#home">Home</a>
@@ -19,83 +29,179 @@
             <a href="#about">About</a>
         </nav>
 
-        <button id="themeBtn" class="theme-btn" onclick="toggleTheme()">🌙</button>
+        <button
+            id="themeBtn"
+            class="theme-btn"
+            onclick="toggleTheme()"
+            aria-label="Toggle theme">
+            🌙
+        </button>
+
     </header>
+
 
     <main>
 
+        <!-- HERO -->
         <section id="home" class="hero">
-            <span class="badge">⚡ Built with Termux + Nginx</span>
 
-            <h1>Welcome to <span>My Website</span></h1>
+            <div class="hero-content">
 
-            <p>
-                Ye meri personal website hai,
-                jo maine HTML, CSS, JavaScript aur Nginx se banayi hai.
-            </p>
+                <span class="badge">
+                    ⚡ Building on Android with Termux
+                </span>
 
-            <div class="hero-buttons">
-                <a href="#features" class="primary-btn">Explore Website</a>
-                <a href="#about" class="secondary-btn">About Me</a>
+                <p class="intro">
+                    Hello, I'm Sagar 👋
+                </p>
+
+                <h1>
+                    I Build
+                    <span>Web Experiences</span>
+                </h1>
+
+                <p class="hero-description">
+                    Welcome to my personal website.
+                    I'm learning web development, Linux,
+                    Termux and modern web technologies
+                    by building real projects.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#features" class="primary-btn">
+                        Explore My Work →
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        About Me
+                    </a>
+
+                </div>
+
             </div>
+
         </section>
 
 
+        <!-- FEATURES -->
         <section id="features" class="section">
-            <h2>My Features</h2>
-            <p class="section-text">Website mein abhi ye features available hain.</p>
+
+            <h2>What This Website Can Do</h2>
+
+            <p class="section-text">
+                Some interactive features I've built while learning.
+            </p>
 
             <div class="features">
 
+                <!-- COUNTER -->
                 <div class="feature-card">
+
                     <div class="icon">🖱️</div>
+
                     <h3>Click Counter</h3>
-                    <p>Button clicks ko count karta hai aur refresh ke baad bhi save rakhta hai.</p>
+
+                    <p>
+                        Counts button clicks and saves the
+                        number even after refreshing the page.
+                    </p>
 
                     <div class="counter-box">
                         <span>Clicks</span>
                         <strong id="count">0</strong>
                     </div>
 
-                    <button class="click-btn" onclick="sayHello()">Click Me</button>
-                    <button class="reset-btn" onclick="resetCount()">Reset</button>
+                    <button
+                        class="click-btn"
+                        onclick="sayHello()">
+                        Click Me
+                    </button>
+
+                    <button
+                        class="reset-btn"
+                        onclick="resetCount()">
+                        Reset
+                    </button>
+
                 </div>
 
+
+                <!-- THEME -->
                 <div class="feature-card">
+
                     <div class="icon">🌙</div>
+
                     <h3>Dark & Light</h3>
-                    <p>Dark aur Light theme ke beech easily switch kar sakte ho.</p>
+
+                    <p>
+                        Switch between dark and light
+                        themes with one button.
+                    </p>
+
                 </div>
 
+
+                <!-- RESPONSIVE -->
                 <div class="feature-card">
+
                     <div class="icon">📱</div>
+
                     <h3>Responsive</h3>
-                    <p>Website mobile aur different screen sizes ke liye responsive hai.</p>
+
+                    <p>
+                        Designed to work across phones,
+                        tablets and desktop screens.
+                    </p>
+
                 </div>
 
             </div>
+
         </section>
 
 
+        <!-- ABOUT -->
         <section id="about" class="section about">
-            <h2>About This Project</h2>
+
+            <span class="section-label">
+                ABOUT THE PROJECT
+            </span>
+
+            <h2>
+                Built From
+                <span>Android</span>
+            </h2>
 
             <p>
-                Is website ko Android ke Termux environment mein
-                Nginx web server ke saath build kiya gaya hai.
+                Is website ko Android ke Termux environment
+                mein build kiya gaya hai.
             </p>
 
             <p>
-                HTML structure handle karta hai, CSS design karta hai,
+                HTML website ka structure handle karta hai,
+                CSS design aur animations control karta hai,
                 aur JavaScript website ko interactive banata hai.
             </p>
+
+            <p>
+                Git aur GitHub ka use karke project ko
+                version control aur online deployment ke
+                liye manage kiya ja raha hai.
+            </p>
+
         </section>
 
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 My Website • Built with ❤️ using Termux</p>
+
+        <p>
+            © 2026 Sagar • Built with ❤️ using Termux
+        </p>
+
     </footer>
 
 
