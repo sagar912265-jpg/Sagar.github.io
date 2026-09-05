@@ -13,14 +13,12 @@ function sayHello() {
     count++;
     document.querySelector("#count").textContent = count;
     localStorage.setItem("count", count);
-    document.querySelector("h1").textContent = "Button dabaya gaya! 🎉";
 }
 
 function resetCount() {
     count = 0;
     document.querySelector("#count").textContent = count;
     localStorage.setItem("count", count);
-    document.querySelector("h1").textContent = "Hello! 👋";
 }
 
 function toggleTheme() {
