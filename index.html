@@ -5,50 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Sagar's personal website built with HTML, CSS, JavaScript, Termux and Nginx">
+          content="Sagar's personal portfolio — web development, Termux, Linux and modern web projects.">
 
     <meta name="theme-color" content="#07111f">
 
-    <title>Sagar | Web Developer</title>
+    <title>Sagar | Developer Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
+
     <header class="navbar">
 
         <a href="#home" class="logo">
-            <span>⚡</span> Sagar
+            <span>⚡</span>
+            Sagar
         </a>
 
-        <nav>
+        <nav id="navMenu">
             <a href="#home">Home</a>
-            <a href="#features">Features</a>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
 
-        <button
-            id="themeBtn"
-            class="theme-btn"
-            onclick="toggleTheme()"
-            aria-label="Toggle theme">
-            🌙
-        </button>
+        <div class="nav-actions">
+
+            <button
+                id="themeBtn"
+                class="theme-btn"
+                onclick="toggleTheme()"
+                aria-label="Toggle theme">
+                🌙
+            </button>
+
+            <button
+                id="menuBtn"
+                class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </div>
 
     </header>
 
 
     <main>
 
-        <!-- HERO -->
+        <!-- ================= HERO ================= -->
+
         <section id="home" class="hero">
 
             <div class="hero-content">
 
                 <span class="badge">
-                    ⚡ Building on Android with Termux
+                    ⚡ Building from Android with Termux
                 </span>
 
                 <p class="intro">
@@ -57,20 +74,19 @@
 
                 <h1>
                     I Build
-                    <span>Web Experiences</span>
+                    <span>Digital Experiences.</span>
                 </h1>
 
                 <p class="hero-description">
-                    Welcome to my personal website.
-                    I'm learning web development, Linux,
-                    Termux and modern web technologies
-                    by building real projects.
+                    I'm learning web development, Linux and modern
+                    technologies by building real projects from my
+                    Android device.
                 </p>
 
                 <div class="hero-buttons">
 
-                    <a href="#features" class="primary-btn">
-                        Explore My Work →
+                    <a href="#projects" class="primary-btn">
+                        View My Work →
                     </a>
 
                     <a href="#about" class="secondary-btn">
@@ -79,38 +95,305 @@
 
                 </div>
 
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>01+</strong>
+                        <span>Projects</span>
+                    </div>
+
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Learning</span>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <span>Ideas</span>
+                    </div>
+
+                </div>
+
             </div>
 
         </section>
 
 
-        <!-- FEATURES -->
-        <section id="features" class="section">
+        <!-- ================= ABOUT ================= -->
 
-            <h2>What This Website Can Do</h2>
+        <section id="about" class="section about">
 
-            <p class="section-text">
-                Some interactive features I've built while learning.
+            <span class="section-label">
+                ABOUT ME
+            </span>
+
+            <h2>
+                Turning Ideas Into
+                <span>Projects.</span>
+            </h2>
+
+            <p>
+                I'm learning how websites and software are built by
+                creating projects instead of only studying theory.
             </p>
 
-            <div class="features">
+            <p>
+                My current environment is Android + Termux, where I
+                work with HTML, CSS, JavaScript, Linux, Git and GitHub.
+            </p>
 
-                <!-- COUNTER -->
-                <div class="feature-card">
+            <div class="about-grid">
 
-                    <div class="icon">🖱️</div>
+                <div class="info-card">
+                    <span>💻</span>
+                    <h3>Web Development</h3>
+                    <p>
+                        Building responsive and interactive websites.
+                    </p>
+                </div>
 
-                    <h3>Click Counter</h3>
+                <div class="info-card">
+                    <span>🐧</span>
+                    <h3>Linux</h3>
+                    <p>
+                        Exploring Linux environments and command-line tools.
+                    </p>
+                </div>
+
+                <div class="info-card">
+                    <span>🚀</span>
+                    <h3>Always Learning</h3>
+                    <p>
+                        Improving skills through real-world projects.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SKILLS ================= -->
+
+        <section id="skills" class="section">
+
+            <span class="section-label">
+                MY TOOLKIT
+            </span>
+
+            <h2>
+                Skills &
+                <span>Technologies.</span>
+            </h2>
+
+            <p class="section-text">
+                Technologies I'm currently learning and using.
+            </p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML</h3>
+                    <p>Structure & accessibility</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3>CSS</h3>
+                    <p>Design & responsive layouts</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>JavaScript</h3>
+                    <p>Interactive web experiences</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🐧</div>
+                    <h3>Linux</h3>
+                    <p>Command line & systems</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📱</div>
+                    <h3>Termux</h3>
+                    <p>Development on Android</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control & deployment</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROJECTS ================= -->
+
+        <section id="projects" class="section projects">
+
+            <span class="section-label">
+                MY WORK
+            </span>
+
+            <h2>
+                Featured
+                <span>Projects.</span>
+            </h2>
+
+            <p class="section-text">
+                Things I'm building while learning.
+            </p>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <div class="project-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Personal Portfolio
+                    </h3>
 
                     <p>
-                        Counts button clicks and saves the
-                        number even after refreshing the page.
+                        A responsive personal website built with
+                        HTML, CSS and JavaScript.
                     </p>
 
-                    <div class="counter-box">
-                        <span>Clicks</span>
-                        <strong id="count">0</strong>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
                     </div>
+
+                    <a href="#home">
+                        Current Project →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <div class="project-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Termux Projects
+                    </h3>
+
+                    <p>
+                        Experiments with Linux commands, servers,
+                        Git and development tools on Android.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Linux</span>
+                        <span>Termux</span>
+                        <span>Git</span>
+                    </div>
+
+                    <a href="#contact">
+                        More Coming →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <div class="project-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Future Project
+                    </h3>
+
+                    <p>
+                        This space is reserved for the next project
+                        I build and launch.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Building</span>
+                        <span>Learning</span>
+                        <span>Future</span>
+                    </div>
+
+                    <a href="#contact">
+                        Stay Tuned →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= INTERACTIVE ================= -->
+
+        <section id="interactive" class="section interactive">
+
+            <span class="section-label">
+                INTERACTIVE
+            </span>
+
+            <h2>
+                Try Something
+                <span>Interactive.</span>
+            </h2>
+
+            <p class="section-text">
+                A small JavaScript experiment running directly in your browser.
+            </p>
+
+            <div class="counter-card">
+
+                <div class="counter-icon">
+                    🖱️
+                </div>
+
+                <h3>
+                    Click Counter
+                </h3>
+
+                <p>
+                    Your clicks are saved in local storage.
+                </p>
+
+                <div class="counter-box">
+
+                    <span>Total Clicks</span>
+
+                    <strong id="count">
+                        0
+                    </strong>
+
+                </div>
+
+                <div class="counter-buttons">
 
                     <button
                         class="click-btn"
@@ -126,80 +409,52 @@
 
                 </div>
 
-
-                <!-- THEME -->
-                <div class="feature-card">
-
-                    <div class="icon">🌙</div>
-
-                    <h3>Dark & Light</h3>
-
-                    <p>
-                        Switch between dark and light
-                        themes with one button.
-                    </p>
-
-                </div>
-
-
-                <!-- RESPONSIVE -->
-                <div class="feature-card">
-
-                    <div class="icon">📱</div>
-
-                    <h3>Responsive</h3>
-
-                    <p>
-                        Designed to work across phones,
-                        tablets and desktop screens.
-                    </p>
-
-                </div>
-
             </div>
 
         </section>
 
 
-        <!-- ABOUT -->
-        <section id="about" class="section about">
+        <!-- ================= CONTACT ================= -->
+
+        <section id="contact" class="section contact">
 
             <span class="section-label">
-                ABOUT THE PROJECT
+                GET IN TOUCH
             </span>
 
             <h2>
-                Built From
-                <span>Android</span>
+                Let's Build Something
+                <span>Great.</span>
             </h2>
 
             <p>
-                Is website ko Android ke Termux environment
-                mein build kiya gaya hai.
+                I'm continuously learning and building new things.
+                More projects and experiments are coming soon.
             </p>
 
-            <p>
-                HTML website ka structure handle karta hai,
-                CSS design aur animations control karta hai,
-                aur JavaScript website ko interactive banata hai.
-            </p>
-
-            <p>
-                Git aur GitHub ka use karke project ko
-                version control aur online deployment ke
-                liye manage kiya ja raha hai.
-            </p>
+            <a href="#home" class="primary-btn">
+                Back To Top ↑
+            </a>
 
         </section>
 
     </main>
 
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
+
     <footer>
 
+        <div class="footer-logo">
+            ⚡ Sagar
+        </div>
+
         <p>
-            © 2026 Sagar • Built with ❤️ using Termux
+            Built with HTML, CSS & JavaScript on Android using Termux.
+        </p>
+
+        <p class="copyright">
+            © 2026 Sagar. All rights reserved.
         </p>
 
     </footer>
