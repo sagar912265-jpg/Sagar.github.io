@@ -1347,3 +1347,124 @@ footer .copyright {
         margin-top: 40px;
     }
 }
+
+/* =========================
+   NAVBAR PREMIUM POLISH
+========================= */
+
+.navbar {
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.12);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+body.light .navbar {
+    box-shadow:
+        0 8px 30px rgba(15, 23, 42, 0.08);
+}
+
+nav a {
+    padding: 8px 2px;
+}
+
+nav a::after {
+    bottom: -6px;
+    border-radius: 999px;
+}
+
+.theme-btn,
+.menu-btn {
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.theme-btn:active,
+.menu-btn:active {
+    transform: scale(0.94);
+}
+
+.logo span {
+    text-shadow:
+        0 0 18px rgba(34, 211, 238, 0.35);
+}
+
+
+/* =========================
+   HERO FINAL POLISH
+========================= */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1000px;
+}
+
+.hero h1 {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-wrap: balance;
+}
+
+.hero h1 span {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-2)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    margin-top: 32px;
+}
+
+.hero-stats {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 18px;
+    border-radius: 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 20px 50px var(--shadow);
+}
+
+.hero-stats div {
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+    border-radius: 14px;
+}
+
+.hero-stats div:hover {
+    transform: translateY(-3px);
+    background: var(--surface-strong);
+}
+
+@media (max-width: 520px) {
+    .hero h1 {
+        max-width: 100%;
+    }
+
+    .hero-stats {
+        padding: 12px;
+    }
+}
