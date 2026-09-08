@@ -820,8 +820,53 @@ nav a:hover::after {
 .project-card h3 {
     font-size: 23px;
 }
+.project-content {
+    position: relative;
+    z-index: 1;
+}
 
-.project-card > p {
+.project-status {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 5px 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 999px;
+
+    color: var(--accent);
+
+    background: var(--surface-strong);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.project-link {
+    position: relative;
+}
+
+.project-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--accent);
+
+    transition: 0.25s ease;
+}
+
+.project-link:hover::after {
+    width: 100%;
+}
+.project-card  p {
     margin-top: 12px;
 
     color: var(--muted);
