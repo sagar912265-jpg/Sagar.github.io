@@ -2409,3 +2409,60 @@ body.light footer {
         font-size: 11px;
     }
 }
+/* =========================
+   PROJECT ACTIONS
+========================= */
+
+.project-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.project-actions .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 10px 16px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--surface-strong);
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.project-actions .project-link:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 10px 25px var(--shadow);
+}
+
+@media (max-width: 520px) {
+
+    .project-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-actions .project-link {
+        width: 100%;
+    }
+
+}
