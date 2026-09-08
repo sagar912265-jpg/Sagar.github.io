@@ -1468,3 +1468,375 @@ nav a::after {
         padding: 12px;
     }
 }
+
+/* =========================================================
+   COMPLETE PROFESSIONAL DESIGN SYSTEM
+========================================================= */
+
+html {
+    scroll-padding-top: 85px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+main {
+    position: relative;
+}
+
+.section {
+    position: relative;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 110px 24px;
+}
+
+.section-label,
+.interactive-kicker,
+.counter-label {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.section h2 {
+    margin: 10px 0 16px;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.section-text,
+.about > p {
+    max-width: 700px;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+/* ---------- CARDS ---------- */
+
+.info-card,
+.skill-card,
+.project-card,
+.interactive-info,
+.counter-card {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.info-card:hover,
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(34, 211, 238, 0.35);
+    background: var(--surface-strong);
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+    position: relative;
+}
+
+.about-grid {
+    margin-top: 45px;
+}
+
+.info-card {
+    border-radius: 24px;
+    padding: 30px;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.info-card p {
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skills-grid {
+    margin-top: 45px;
+}
+
+.skill-card {
+    border-radius: 22px;
+    padding: 28px;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+    font-size: 21px;
+}
+
+.skill-card p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* ---------- PROJECTS ---------- */
+
+.projects-grid {
+    margin-top: 45px;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: 30px;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -100px;
+    right: -90px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.08;
+    filter: blur(25px);
+    pointer-events: none;
+}
+
+.project-card h3 {
+    position: relative;
+    margin-bottom: 12px;
+    font-size: 23px;
+}
+
+.project-card p {
+    position: relative;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+/* ---------- INTERACTIVE ---------- */
+
+.interactive {
+    position: relative;
+}
+
+.interactive-layout {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.interactive-info {
+    border-radius: 28px;
+    padding: 38px;
+}
+
+.interactive-icon {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    background: rgba(34, 211, 238, 0.1);
+    font-size: 27px;
+}
+
+.interactive-info h3 {
+    margin: 10px 0 16px;
+    font-size: 34px;
+    line-height: 1.15;
+}
+
+.interactive-info > p {
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.interactive-features {
+    display: grid;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.interactive-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--muted);
+}
+
+.interactive-feature span {
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.counter-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 28px;
+    padding: 38px;
+    text-align: center;
+}
+
+.counter-icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.counter-card h3 {
+    margin: 7px 0 18px;
+    font-size: 32px;
+}
+
+.counter-box {
+    margin: 10px 0 24px;
+    padding: 26px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+#count {
+    display: block;
+    font-size: clamp(48px, 8vw, 72px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--accent);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+    text-align: center;
+}
+
+.contact .section-text {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    position: relative;
+    margin-top: 30px;
+    padding: 35px 24px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+}
+
+footer a {
+    color: var(--accent);
+    transition: opacity 0.2s ease;
+}
+
+footer a:hover {
+    opacity: 0.75;
+}
+
+/* ---------- BUTTON POLISH ---------- */
+
+button,
+.btn,
+a.button {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+    transform: translateY(-2px);
+}
+
+/* ---------- LIGHT THEME ---------- */
+
+body.light .info-card,
+body.light .skill-card,
+body.light .project-card,
+body.light .interactive-info,
+body.light .counter-card {
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 850px) {
+    .interactive-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 90px 22px;
+    }
+}
+
+@media (max-width: 520px) {
+    .section {
+        padding: 78px 18px;
+    }
+
+    .section h2 {
+        font-size: 36px;
+        letter-spacing: -1.4px;
+    }
+
+    .section-text,
+    .about > p {
+        font-size: 15px;
+    }
+
+    .info-card,
+    .skill-card,
+    .project-card {
+        border-radius: 19px;
+    }
+
+    .interactive-info,
+    .counter-card {
+        padding: 24px;
+        border-radius: 21px;
+    }
+
+    .interactive-info h3,
+    .counter-card h3 {
+        font-size: 26px;
+    }
+
+    .counter-box {
+        padding: 20px;
+    }
+}
