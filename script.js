@@ -305,3 +305,70 @@ yearElements.forEach(
             " Sagar. All rights reserved.";
     }
 );
+/* =========================
+   NAVBAR SCROLL + ACTIVE LINK
+========================= */
+
+const navbar = document.querySelector(".navbar");
+const sections = document.querySelectorAll("main section[id]");
+const navigationLinks = document.querySelectorAll("#navMenu a");
+
+
+function updateNavbar() {
+
+    if (navbar) {
+
+        navbar.classList.toggle(
+            "scrolled",
+            window.scrollY > 20
+        );
+    }
+
+
+    let currentSection = "";
+
+    sections.forEach(function (section) {
+
+        const sectionTop =
+            section.offsetTop - 120;
+
+        const sectionBottom =
+            sectionTop + section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionBottom
+        ) {
+            currentSection = section.id;
+        }
+
+    });
+
+
+    navigationLinks.forEach(function (link) {
+
+        link.classList.remove("active");
+
+        if (
+            link.getAttribute("href") ===
+            "#" + currentSection
+        ) {
+            link.classList.add("active");
+        }
+
+    });
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateNavbar,
+    { passive: true }
+);
+
+
+window.addEventListener(
+    "load",
+    updateNavbar
+);
