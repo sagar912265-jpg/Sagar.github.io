@@ -2466,3 +2466,117 @@ body.light footer {
     }
 
 }
+/* =========================
+   HERO PREMIUM V3
+========================= */
+
+.hero {
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(34, 211, 238, 0.08);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 80px rgba(34, 211, 238, 0.06);
+
+    pointer-events: none;
+}
+
+.hero-content {
+    animation:
+        heroEnter 0.9s ease both,
+        heroFloat 6s ease-in-out 1s infinite;
+}
+
+@keyframes heroFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+.hero h1 {
+    text-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.18);
+}
+
+.hero-description {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-stats {
+    margin-top: 48px;
+}
+
+.hero-stats div {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-stats div::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.05),
+            transparent
+        );
+
+    transform: translateX(-100%);
+
+    transition: transform 0.5s ease;
+}
+
+.hero-stats div:hover::before {
+    transform: translateX(100%);
+}
+
+@media (max-width: 520px) {
+
+    .hero {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .hero::before {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-content {
+        animation:
+            heroEnter 0.9s ease both;
+    }
+
+    .hero-stats {
+        margin-top: 38px;
+    }
+}
