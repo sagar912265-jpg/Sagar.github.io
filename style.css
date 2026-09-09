@@ -2580,3 +2580,78 @@ body.light footer {
         margin-top: 38px;
     }
 }
+ /* =========================
+    NAVBAR PREMIUM V2
+ ========================= */
+
+.navbar {
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(5, 8, 22, 0.9);
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+body.light .navbar.scrolled {
+    background: rgba(244, 247, 251, 0.94);
+}
+
+nav a.active {
+    color: var(--text);
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.logo span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover span {
+    transform: rotate(-8deg) scale(1.08);
+}
+
+.theme-btn:hover,
+.menu-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent);
+    box-shadow:
+        0 8px 25px rgba(34, 211, 238, 0.12);
+}
+
+.theme-btn:active,
+.menu-btn:active {
+    transform: scale(0.94);
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    nav a {
+        font-size: 13px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+}
