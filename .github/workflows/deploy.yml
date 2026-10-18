@@ -1,6 +1,12 @@
 name: Deploy React Portfolio to GitHub Pages
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "redesign/**"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
 permissions:
